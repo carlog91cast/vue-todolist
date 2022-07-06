@@ -18,14 +18,26 @@ const list = new Vue(
                     done: true
                 },
                 {
-                    text: 'Fare il bucato',
+                    text: 'costruire una stazione spaziale in grado di distruggere un pianeta',
+                    done: false
+                },
+                {
+                    text: 'dar da mangiare al nazgul',
+                    done: false
+                },
+                {
+                    text: 'conoscere personalmente un quasar',
+                    done: false
+                },
+                {
+                    text: 'collaudare materassi eminflex',
                     done: false
                 }
             ],
 
         },
         methods: {
-            addToDo: function () {
+            addNewToDo: function () {
                 if (this.newTodo.length > 0) {
                     this.todos.push(
                         {
@@ -34,7 +46,12 @@ const list = new Vue(
                         },
                     )
                 }
+            },
+            addTodos: function(){
+                if(todos.length > 0){
+                    return this.addTodos;
+                }
             }
-        }
+        },
     },
 );
