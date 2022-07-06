@@ -5,10 +5,9 @@ const list = new Vue(
     {
         el: '#root',
         data: {
-            newToDo: [
+            // nuovo item da aggiungere
+            newTodo: "",
 
-            ],
-            
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -22,7 +21,20 @@ const list = new Vue(
                     text: 'Fare il bucato',
                     done: false
                 }
-            ]
+            ],
+
+        },
+        methods: {
+            addToDo: function () {
+                if (this.newTodo.length > 0) {
+                    this.todos.push(
+                        {
+                            text: this.newTodo,
+                            done: false,
+                        },
+                    )
+                }
+            }
         }
-    }
-)
+    },
+);

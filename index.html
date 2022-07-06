@@ -21,8 +21,8 @@
             <div class="row">
                 <div class="col-12 mt-3">
                     <!-- aggiungo un nuovo elemento alla todo list -->
-                    <input @keyup.enter="" type="text" placeholder="Add to do">
-                    <button @click="" class="btn btn-primary m-5">Add</button>
+                    <input v-model="" @keyup.enter="newToDo" type="text" placeholder="Add to do">
+                    <button @click="addToDo" class="btn btn-primary m-5">Add</button>
                 </div>
                 <!-- list item -->
                 <div>
