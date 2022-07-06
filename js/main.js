@@ -30,13 +30,30 @@ const list = new Vue(
                     done: true
                 },
                 {
+                    text: 'ricordarsi di scrivere bene le variabili con le maiuscole al posto giusto',
+                    done: false
+                },
+                {
+                    text: 'rispettare le milestone nel giusto ordine',
+                    done: false
+                },
+                {
+                    text: 'non scrivere funzioni booleane ad minchiam tanto per',
+                    done: false
+                },
+                {
+                    text: 'scrivere bene lenght(si scriverà cosi?)',
+                    done: false
+                },
+                {
                     text: 'collaudare materassi eminflex',
                     done: false
-                }
+                },
             ],
 
         },
         methods: {
+            // creo la funzione che mi aggiunge un nuovo list item collegato all'html in combinato disposto con l'imput e col button addd
             addNewToDo: function () {
                 if (this.newToDo.length > 0) {
                     this.todos.push(
@@ -46,8 +63,10 @@ const list = new Vue(
                         },
                     )
                 }
+                // azzero la casella imput
                 this.newToDo = "";
             },
+            // rimuovo l'elemento con .splice collegato in html con lo span che contiene il font del riquadro x
             removeToDo: function(index){
                 this.todos.splice(index, 1);
             },
