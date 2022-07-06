@@ -6,7 +6,7 @@ const list = new Vue(
         el: '#root',
         data: {
             // nuovo item da aggiungere
-            newTodo: "",
+            newToDo: "",
 
             todos: [
                 {
@@ -15,19 +15,19 @@ const list = new Vue(
                 },
                 {
                     text: 'Fare la spesa',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'costruire una stazione spaziale in grado di distruggere un pianeta',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'dar da mangiare al nazgul',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'conoscere personalmente un quasar',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'collaudare materassi eminflex',
@@ -38,20 +38,17 @@ const list = new Vue(
         },
         methods: {
             addNewToDo: function () {
-                if (this.newTodo.length > 0) {
+                if (this.newToDo.length > 0) {
                     this.todos.push(
                         {
-                            text: this.newTodo,
+                            text: this.newToDo,
                             done: false,
                         },
                     )
                 }
+                this.newToDo = "";
             },
-            addTodos: function(){
-                if(todos.length > 0){
-                    return this.addTodos;
-                }
-            }
+            
         },
     },
 );

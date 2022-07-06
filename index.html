@@ -20,14 +20,14 @@
             <div class="row">
                 <div class="col-12 mt-3">
                     <!-- aggiungo un nuovo elemento alla todo list -->
-                    <input v-model="newToDo.text" @keyup.enter="newToDo" type="text" placeholder="Add to do">
-                    <button @click="addToDo" class="btn btn-primary m-5">Add</button>
+                    <input v-model="newToDo" @keyup.enter="addNewToDo" type="text" placeholder="Add to do">
+                    <button @click="addNewToDo" class="btn btn-primary m-5">Add</button>
                 </div>
                 <!-- list item -->
                 <div>
-                    <ul v-if="addToDos" class="list-group list_style">
+                    <ul v-if="todos.length > 0" class="list-group list_style">
                         <li v-for="toDo, index in todos" :class="{'already-done': toDo.done === true, }">
-                            {{ToDo.text }}>
+                            {{toDo.text }}
                         </li>
                     </ul>
                 </div>
@@ -37,7 +37,7 @@
     </div>
 
 
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
