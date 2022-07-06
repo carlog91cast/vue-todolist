@@ -31,7 +31,7 @@
                     <ul v-if="todos.length > 0" class="list-group list_style">
                         <!-- nel li creo un for per inserire gli elementi dell'array aggiungendo la classe in cui il testo è barrato solo se il done è true -->
                         <!-- al click il done true diventa false quindi aggiungero o togliero la barra sul testo -->
-                        <li @click="toDo.done = !toDo.done" v-for="toDo, index in todos" :class="{'already-done': toDo.done === true, }">
+                        <li class="list-group-item list-group-item-primary" @click="toDo.done = !toDo.done" v-for="toDo, index in todos" :class="{'already-done': toDo.done === true,  }">
                             {{toDo.text }}
                             <span @click="removeToDo(index)"><i class="fa-solid fa-square-xmark"></i></span>
                         </li>
