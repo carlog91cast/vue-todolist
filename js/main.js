@@ -48,6 +48,9 @@ const list = new Vue(
                 }
                 this.newToDo = "";
             },
+            removeToDo: function(index){
+                this.todos.splice(index, 1);
+            },
             
         },
     },
